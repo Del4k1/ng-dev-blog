@@ -1,0 +1,18 @@
+<div class="user-post-wrapper">
+  <mat-card class="user-post-item" *ngFor="let post of userPosts">
+    <mat-card-content class="user-post-title">
+      <a [routerLink]="['/post', post._id]">
+        <h1>{{ post.title }}</h1>
+      </a>
+    </mat-card-content>
+
+    <mat-card-actions class="user-post-item-action">
+      <button mat-button color="warn" (click)="restoreDeletedPost(post._id)">
+        Удалить
+      </button>
+      <button mat-button color="primary" (click)="editPost(post._id)">
+        Изменить
+      </button>
+    </mat-card-actions>
+  </mat-card>
+</div>

@@ -1,0 +1,28 @@
+<div class="wrapper-show-profile">
+  <mat-card class="flex-show-profile" *ngIf="userData && userData.username">
+    <div class="profile-user-info">
+      <div class="user-image" (click)="openDialog()">
+        <img [src]="avatar" alt="User Avatar" />
+      </div>
+
+      <div class="user-username">
+        <mat-card-title
+          ><strong
+            >Пользователь: {{ userData.username }}</strong
+          ></mat-card-title
+        >
+      </div>
+
+      <div class="user-post-info">
+        <ul>
+          <li>
+            <span>{{ userPosts ? userPosts.length : 0 }}</span> posts published
+          </li>
+          <li>
+            <span>{{ savePost ? savePost.length : 0 }}</span> saved posts
+          </li>
+        </ul>
+      </div>
+    </div>
+  </mat-card>
+</div>

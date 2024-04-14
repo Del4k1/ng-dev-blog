@@ -1,0 +1,75 @@
+<div class="comments-list">
+  <div class="comment-list" *ngFor="let comment of comments">
+    <div class="comment-info">
+      <div class="author-img">
+        <img [src]="comment.avatar || avatar" alt="Аватарка пользователя" />
+      </div>
+
+      <div class="comment-author">
+        <h3>
+          <strong>Author: {{ comment.username }}</strong>
+        </h3>
+        <h3>{{ comment.createdAt | date | uppercase }}</h3>
+      </div>
+    </div>
+
+    <div class="comment-content">
+      <h3><strong>Комментарий: </strong> {{ comment.content }}</h3>
+    </div>
+
+    <div class="comment-btns">
+      <button
+        mat-raised-button
+        color="accent"
+        [disabled]="isDisabled"
+        (click)="toggleLike(comment._id)"
+      >
+        <mat-icon>favorite</mat-icon>
+        {{ comment.likes.length }} Like{{
+          comment.likes.length !== 1 ? "s" : ""
+        }}
+      </button>
+
+      <button
+        mat-raised-button
+        color="primary"
+        [disabled]="isDisabled"
+        (click)="toggleReply(comment._id)"
+      >
+        Reply
+      </button>
+    </div>
+
+    <div *ngIf="isReply[comment._id]" class="reply-form">
+      <mat-form-field appearance="fill">
+        <textarea matInput #replyContent></textarea>
+      </mat-form-field>
+      <button
+        mat-raised-button
+        color="primary"
+        (click)="addReply(replyContent.value, comment._id)"
+      >
+        Ответить
+      </button>
+    </div>
+
+    <div *ngFor="let reply of comment.reply" class="reply-content">
+      <div class="comment-info">
+        <div class="author-img">
+          <img [src]="reply.avatar || avatar" alt="Аватарка пользователя" />
+        </div>
+
+        <div class="comment-author">
+          <h3>{{ reply.createdAt | date | uppercase }}</h3>
+          <h3>
+            <strong>Author: {{ reply.username }}</strong>
+          </h3>
+        </div>
+      </div>
+
+      <div class="reply-content">
+        <h3><strong>Ответ: </strong>{{ reply.content }}</h3>
+      </div>
+    </div>
+  </div>
+</div>

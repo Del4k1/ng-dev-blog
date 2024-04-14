@@ -1,0 +1,26 @@
+<mat-button-toggle-group
+  *ngIf="post"
+  name="reactions"
+  aria-label="Reactions"
+  multiple
+>
+  <mat-button-toggle (click)="likePost()" [disabled]="isDisabled">
+    <mat-icon>favorite</mat-icon>
+    <strong>{{ post.like.length }}</strong>
+  </mat-button-toggle>
+
+  <mat-button-toggle (click)="thumbUpPost()" [disabled]="isDisabled">
+    <mat-icon>thumb_up</mat-icon>
+    <strong>{{ post.thumbUp.length }}</strong>
+  </mat-button-toggle>
+
+  <mat-button-toggle (click)="thumbDownPost()" [disabled]="isDisabled">
+    <mat-icon>thumb_down</mat-icon>
+    <strong>{{ post.thumbDown.length }}</strong>
+  </mat-button-toggle>
+
+  <mat-button-toggle (click)="firePost()" [disabled]="isDisabled">
+    <mat-icon>whatshot</mat-icon>
+    <strong>{{ post.fire.length }}</strong>
+  </mat-button-toggle>
+</mat-button-toggle-group>

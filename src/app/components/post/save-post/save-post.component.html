@@ -1,0 +1,21 @@
+<div class="wrapper-save-post">
+  <mat-card class="save-post" *ngFor="let post of savedPosts">
+    <div class="post-desc">
+      <a [routerLink]="['/post', post.savedPosts[0]._id]">
+        <h1>{{ post.savedPosts[0].title }}</h1>
+      </a>
+      <p>{{ post.savedPosts[0].createdAt | date | uppercase }}</p>
+    </div>
+
+    <div class="post-btns">
+      <button
+        mat-raised-button
+        color="warn"
+        class="btn-delete"
+        (click)="deleteSavedPost(post._id)"
+      >
+        Delete
+      </button>
+    </div>
+  </mat-card>
+</div>

@@ -1,0 +1,76 @@
+.wrapper-post {
+  margin-top: 50px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.post {
+  margin: 10px;
+  width: 500px;
+  padding: 20px;
+}
+
+.post-desc {
+  text-align: left;
+}
+
+.post h1 {
+  color: #333;
+  font-size: 24px;
+  font-weight: bold;
+  letter-spacing: 1px;
+  margin: 0;
+  transition: 0.4s all;
+}
+
+.post h1:hover {
+  opacity: 0.8;
+  text-decoration: underline;
+}
+
+.post-btns {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 10px;
+}
+
+.btn-save {
+  width: 100px;
+  height: 40px;
+  border: none;
+  cursor: pointer;
+  border-radius: 3px;
+  transition: 0.4s all;
+  background-color: #3f51b5;
+  color: white;
+}
+
+.btn-save:hover {
+  background-color: #303f9f;
+}
+
+@media (max-width: 767px) {
+  .wrapper-post {
+    margin-top: 30px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .post {
+    margin: 10px;
+    width: 90%;
+    max-width: 500px;
+    padding: 20px;
+  }
+
+  .post h1 {
+    font-size: 20px;
+  }
+
+  .post-btns {
+    justify-content: center;
+    margin-top: 20px;
+  }
+}

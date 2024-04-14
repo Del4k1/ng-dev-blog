@@ -1,0 +1,32 @@
+.form {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.form-container {
+  width: 500px;
+  padding: 20px;
+  margin-top: 100px;
+  text-align: center;
+}
+
+.form-title {
+  font-size: 30px;
+  font-weight: 600;
+  margin-bottom: 30px;
+}
+
+.input-container {
+  margin: 8px 0;
+}
+
+.submit {
+  height: 50px;
+  margin: 10px 0;
+}
+
+.signup-link {
+  margin-top: 20px;
+}

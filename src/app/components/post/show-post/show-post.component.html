@@ -1,0 +1,22 @@
+<div class="wrapper-post">
+  <mat-card *ngFor="let post of posts" class="post">
+    <div class="post-desc">
+      <a [routerLink]="['/post', post._id]">
+        <h1>{{ post.title }}</h1>
+      </a>
+
+      <p>{{ post.createdAt | date | uppercase }}</p>
+    </div>
+    <div class="post-btns">
+      <button
+        mat-raised-button
+        color="primary"
+        [disabled]="isDisabled"
+        (click)="savePostToUser(post)"
+        class="btn-save"
+      >
+        Сохранить
+      </button>
+    </div>
+  </mat-card>
+</div>

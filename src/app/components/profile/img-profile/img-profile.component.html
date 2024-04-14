@@ -1,0 +1,10 @@
+<div class="upload-profile">
+  <input type="file" accept="image/*" (change)="onFileSelected($event)" />
+
+  <div class="upload-btns">
+    <button mat-raised-button color="primary" (click)="uploadAvatar()">
+      Upload Image
+    </button>
+    <button mat-raised-button color="warn" (click)="onNoClick()">Cancel</button>
+  </div>
+</div>

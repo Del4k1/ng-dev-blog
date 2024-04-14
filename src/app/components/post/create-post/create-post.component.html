@@ -1,0 +1,21 @@
+<div class="form">
+  <div class="form-flex">
+    <mat-form-field class="form-input">
+      <textarea
+        matInput
+        [(ngModel)]="title"
+        placeholder="Заголовок статьи"
+      ></textarea>
+    </mat-form-field>
+
+    <div class="form-input">
+      <ckeditor [editor]="Editor" [(ngModel)]="content"></ckeditor>
+    </div>
+
+    <div class="form-btn">
+      <button mat-raised-button color="primary" (click)="createPost()">
+        Публиковать
+      </button>
+    </div>
+  </div>
+</div>

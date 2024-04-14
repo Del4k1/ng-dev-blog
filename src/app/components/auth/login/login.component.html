@@ -1,0 +1,28 @@
+<form [formGroup]="form" (submit)="onSubmit()" class="form">
+  <mat-card class="form-container">
+    <mat-card-title class="form-title">Welcome back</mat-card-title>
+    <mat-form-field class="input-container">
+      <input
+        matInput
+        formControlName="username"
+        placeholder="Enter username"
+        type="text"
+        name="username"
+      />
+    </mat-form-field>
+    <mat-form-field class="input-container">
+      <input
+        matInput
+        formControlName="password"
+        placeholder="Enter password"
+        type="password"
+        name="password"
+        autocomplete="on"
+      />
+    </mat-form-field>
+    <button mat-raised-button color="primary" class="submit" type="submit">
+      Sign in
+    </button>
+    <p class="signup-link">No account? <a routerLink="/register">Sign up</a></p>
+  </mat-card>
+</form>

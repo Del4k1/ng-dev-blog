@@ -1,0 +1,22 @@
+<div class="wrapper-post">
+  <mat-card class="post">
+    <mat-card-header>
+      <mat-card-title [innerHTML]="post.title"></mat-card-title>
+    </mat-card-header>
+    <app-like-post></app-like-post>
+    <mat-card-content>
+      <div [innerHTML]="post.content | safeHtml"></div>
+    </mat-card-content>
+  </mat-card>
+
+  <button
+    mat-fab
+    color="primary"
+    class="back-to-top-btn"
+    (click)="scrollToTop()"
+  >
+    <mat-icon>keyboard_arrow_up</mat-icon>
+  </button>
+
+  <app-comment></app-comment>
+</div>

@@ -1,0 +1,23 @@
+<mat-toolbar color="primary">
+  <mat-toolbar-row style="justify-content: space-between">
+    <a routerLink="/">
+      <span>HOME</span>
+    </a>
+
+    <button
+      mat-icon-button
+      [matMenuTriggerFor]="menu"
+      class="example-icon"
+      aria-label="Example icon-button with menu icon"
+    >
+      <mat-icon>menu</mat-icon>
+    </button>
+    <mat-menu #menu="matMenu">
+      <a routerLink="/profile" mat-menu-item>Профиль</a>
+      <a routerLink="/save-post" mat-menu-item>Сохраненые</a>
+      <a routerLink="/create-post" mat-menu-item>Создать Статью</a>
+      <a routerLink="/user-post" mat-menu-item>Мои Статьи</a>
+      <button mat-menu-item (click)="signOut()">Выйти</button>
+    </mat-menu>
+  </mat-toolbar-row>
+</mat-toolbar>

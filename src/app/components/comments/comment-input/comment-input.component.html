@@ -1,0 +1,18 @@
+<form (submit)="addComment(content.value)" class="comment-form">
+  <mat-form-field appearance="fill" class="comment-input">
+    <textarea
+      matInput
+      placeholder="Ваш комментарий"
+      #content
+      required
+    ></textarea>
+  </mat-form-field>
+  <button
+    mat-raised-button
+    [disabled]="isDisabled"
+    color="primary"
+    type="submit"
+  >
+    Добавить комментарий
+  </button>
+</form>

@@ -1,0 +1,40 @@
+.wrapper-show-profile {
+  display: flex;
+  justify-content: center;
+  margin-top: 50px;
+  padding: 30px;
+}
+
+.flex-show-profile {
+  width: 300px;
+}
+
+.profile-user-info {
+  padding: 20px;
+}
+
+.user-image {
+  cursor: pointer;
+  text-align: center;
+}
+
+.user-image img {
+  width: 70px;
+  height: 70px;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+.user-post-info ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.user-post-info ul li {
+  margin: 15px 0;
+}
+
+.user-post-info ul li span {
+  font-weight: bold;
+  margin-right: 5px;
+}

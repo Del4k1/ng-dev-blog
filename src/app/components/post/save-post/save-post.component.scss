@@ -1,0 +1,52 @@
+.wrapper-save-post {
+  margin-top: 30px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.save-post {
+  margin: 10px;
+  flex: 1;
+  max-width: 500px;
+  padding: 20px;
+}
+
+.save-post h1 {
+  font-size: 20px;
+}
+
+.save-post h1:hover {
+  opacity: 0.8;
+  text-decoration: underline;
+}
+
+.post-btns {
+  justify-content: center;
+  margin-top: 20px;
+}
+
+@media (max-width: 767px) {
+  .wrapper-save-post {
+    margin-top: 30px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .save-post {
+    margin: 10px;
+    width: 90%;
+    max-width: 500px;
+    padding: 20px;
+  }
+
+  .save-post h1 {
+    font-size: 20px;
+  }
+
+  .post-btns {
+    justify-content: center;
+    margin-top: 20px;
+  }
+}
